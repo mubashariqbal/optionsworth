@@ -1,0 +1,98 @@
+* {
+	font-family: 'Montserrat', sans-serif;
+}
+
+header h1 {
+	border-bottom: 1px solid #ccc;
+	padding: 0.5em 0 1em 0;
+}
+header h2 {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 1em;
+	text-transform: uppercase;
+	font-size: 1.25em;
+}
+
+label {
+	text-transform: uppercase;
+	font-weight: bold;
+    font-size: 1.25em;
+	padding: 1em;
+}
+
+input[type="number"] {
+	border: none;
+	float: right;
+	padding: 1em;
+	margin-right: 1em;
+    text-align: right;
+    font-size: 1.25em;
+    color: #aaa;
+    border-bottom: 1px solid #ccc;
+    width: 10em;
+}
+
+input[type="range"] {
+}
+
+span {
+    font-size: 1.25em;
+	padding: 1em;
+	float: right;
+    font-size: 1.25em;
+    color: #aaa;
+}
+
+label .notes {
+	text-transform: none;
+	color: #666 !important;
+	font-size: 0.75em;
+	max-width: 40em;
+	font-weight: lighter;
+}
+
+.btn-primary {
+	background: #23a633;
+	border-color: #23a633;
+	font-size: 1.5em;
+}
+
+.slider {
+	margin-left: 1em;
+	width: 95% !important;
+}
+
+#result {
+	text-align: center;
+}
+	#result h2 {
+		color: #23a633;
+	}
+
+	#result h3 {
+		color: #000;
+		text-transform: uppercase;
+		font-weight: bold;
+	    font-size: 1.25em;
+	}
+
+	#result p {
+		color: #aaa;
+	}
+
+	#result .profit p {
+		color: #23a633;
+	}
+		#result .profit p.noprofit {
+			color: red;
+		}
+
+footer {
+	margin-top: 5em;
+	text-align: center;
+	color: #999;
+}
+
+	footer a {
+		color: #23a633;
+	}
