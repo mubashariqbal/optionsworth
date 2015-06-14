@@ -60,25 +60,25 @@ var vm = new Vue({
 
 				this.could_buy = '';
 				if (this.profit > 30000000) { // > 30 million
-					this.could_buy = 'You could buy a <i class="fa fa-futbol-o"></i> team';
+					this.could_buy = 'You could buy your favorite <i class="fa fa-futbol-o"></i> team';
 				} else if (this.profit > 20000000) { // > 20 million
-					this.could_buy = 'You could buy a <i class="fa fa-plane"></i>';
+					this.could_buy = 'You could buy a jet <i class="fa fa-plane"></i>';
 				} else if (this.profit > 10000000) { // > 10 million
-					this.could_buy = 'You could buy a <i class="fa fa-university"></i>';
+					this.could_buy = 'You could buy an <i class="fa fa-university"></i>';
 				} else if (this.profit > 1000000) { // > 1 million
-					this.could_buy = 'You could buy a <i class="fa fa-building"></i>';
+					this.could_buy = 'You could buy an office <i class="fa fa-building"></i>';
 				} else if (this.profit > 500000) { // > 500K
-					this.could_buy = 'You could buy a <i class="fa fa-home"></i>';
+					this.could_buy = 'You could buy a big <i class="fa fa-home"></i>';
 				} else if (this.profit > 250000) { // > 250K
-					this.could_buy = 'You could buy a <i class="fa fa-ship"></i>';
+					this.could_buy = 'You could buy a fancy <i class="fa fa-ship"></i>';
 				} else if (this.profit > 100000) { // > 100K
-					this.could_buy = 'You could buy a <i class="fa fa-car"></i>';
+					this.could_buy = 'You could buy a sports <i class="fa fa-car"></i>';
 				} else if (this.profit >= 50000) { // > 50K
-					this.could_buy = 'You could buy a <i class="fa fa-diamond"></i>';
+					this.could_buy = 'You could buy a sparkling <i class="fa fa-diamond"></i>';
 				} else if (this.profit >= 1000) { // > 1000
-					this.could_buy = 'You could buy a <i class="fa fa-cutlery"></i>';
+					this.could_buy = 'You could buy a great <i class="fa fa-cutlery"></i>';
 				} else if (this.profit >= 100) { // > 100
-					this.could_buy = 'You could buy a <i class="fa fa-glass"></i>';
+					this.could_buy = 'You could buy a round of <i class="fa fa-glass"></i>';
 				} else {
 					this.could_buy = '';
 				}
