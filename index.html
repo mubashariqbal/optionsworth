@@ -80,7 +80,7 @@
                         </label>
                       </div>
                       <div class="col-sm-4">
-                        <input v-on="change: calculateValue" type="number" name="shares_you_get"    value="{{shares_you_get}}" v-model="shares_you_get" v-el="shares_you_get" placeholder="Number of Shares you Get"/>
+                        <input v-on="change: calculateValue" required type="number" name="shares_you_get"    value="{{shares_you_get}}" v-model="shares_you_get" v-el="shares_you_get" placeholder="Number of Shares you Get"/>
                       </div>
                   </div>
                 </div>
@@ -95,7 +95,7 @@
                       </label>
                     </div>
                     <div class="col-sm-4">
-                      <input v-on="change: calculateValue" class="" type="number" name="total_shares"      value="{{total_shares}}" v-model="total_shares" v-el="total_shares" placeholder="Total Shares"/>
+                      <input v-on="change: calculateValue" required  class="" type="number" name="total_shares"      value="{{total_shares}}" v-model="total_shares" v-el="total_shares" placeholder="Total Shares"/>
                     </div>
                   </div>
                 </div>
@@ -114,6 +114,22 @@
                     </div>
                   </div>
                 </div>
+
+                <div class="form-group row">
+                  <div class="control col-sm-12">
+                    <div class="col-sm-8">
+                      <label class="">Years to fully Vest
+                        <p class="notes">
+                          Normally 4 years, but you might be able to negoiate this down.
+                        </p>
+                      </label>
+                    </div>
+                    <div class="col-sm-4">
+                      <input v-on="change: calculateValue" required class="" type="number" min="1" max="10" step="1" name="price_you_pay"     value="{{years_to_vest}}" v-model="years_to_vest" v-el="years_to_vest" placeholder="Years to Vest"/>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="text-center">
                   <button v-on="click: calculateValue" class="btn btn-primary" type="submit">Calculate</button>
                 </div>
@@ -128,8 +144,11 @@
 
                   <div class="profit" v-if="profit">
                     <h3>Profit</h3>
-                    <p v-class="noprofit: noProfit">{{profit | currency}}</p>
+                    <p v-class="noprofit: noProfit">{{profit | currency}}*</p>
+                    <p v-if="!noProfit" v-class="noprofit: noProfit">{{profit_per_year | currency}} / year</p>
                     <p class="could">{{{ could_buy }}}</p>
+
+                    <p v-if="!noProfit" class="taxes">* You could pay as much as 40% in taxes</p>
                   </div>
                 </div>
             </div>

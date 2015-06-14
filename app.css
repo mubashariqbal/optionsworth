@@ -98,6 +98,12 @@ label .notes {
 		color: #aaa;
 	}
 
+	#result p.taxes {
+		margin-top: 4em;
+		color: #666;
+		font-size: 0.85em;
+	}
+
 footer {
 	margin-top: 5em;
 	text-align: center;

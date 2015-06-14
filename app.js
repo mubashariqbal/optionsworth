@@ -5,16 +5,17 @@ var vm = new Vue({
 		shares_you_get: '10000',
 		total_shares: '1000000',
 		price_you_pay: '0.50',
+		years_to_vest: '4',
 
 		options_worth: '',
 		profit: '',
+		profit_per_year: '',
 		could_buy: '',
 		pct_ownership: '',
 		noProfit: false
 	},
 
     ready: function(){
-    	console.log("ready");
         this.calculateValue();
     },
 
@@ -47,6 +48,15 @@ var vm = new Vue({
 		calculateValue: function(e) {
 			if (e) e.preventDefault();
 
+			// reset
+			this.profit = '';
+			this.profit_per_share = '';
+
+			if (this.shares_you_get == '' || this.total_shares == '') {
+				this.options_worth = '';
+				return;
+			}
+
 			this.options_worth = this.value_of_company * (this.shares_you_get / this.total_shares);
 			this.pct_ownership = (this.shares_you_get / this.total_shares) * 100;
 
@@ -54,6 +64,8 @@ var vm = new Vue({
 				this.profit = this.options_worth - (this.price_you_pay * this.shares_you_get);
 				if (this.profit > 0) {
 					this.noProfit = false;
+
+					this.profit_per_year = this.profit / this.years_to_vest;
 				} else {
 					this.noProfit = true;
 				}
