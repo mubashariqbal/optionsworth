@@ -8,7 +8,7 @@ var vm = new Vue({
 
 		options_worth: '',
 		profit: '',
-		could_by: '',
+		could_buy: '',
 		pct_ownership: '',
 		noProfit: false
 	},
@@ -56,6 +56,31 @@ var vm = new Vue({
 					this.noProfit = false;
 				} else {
 					this.noProfit = true;
+				}
+
+				this.could_buy = '';
+				if (this.profit > 30000000) { // > 30 million
+					this.could_buy = 'You could buy a <i class="fa fa-futbol-o"></i> team';
+				} else if (this.profit > 20000000) { // > 20 million
+					this.could_buy = 'You could buy a <i class="fa fa-plane"></i>';
+				} else if (this.profit > 10000000) { // > 10 million
+					this.could_buy = 'You could buy a <i class="fa fa-university"></i>';
+				} else if (this.profit > 1000000) { // > 1 million
+					this.could_buy = 'You could buy a <i class="fa fa-building"></i>';
+				} else if (this.profit > 500000) { // > 500K
+					this.could_buy = 'You could buy a <i class="fa fa-home"></i>';
+				} else if (this.profit > 250000) { // > 250K
+					this.could_buy = 'You could buy a <i class="fa fa-ship"></i>';
+				} else if (this.profit > 100000) { // > 100K
+					this.could_buy = 'You could buy a <i class="fa fa-car"></i>';
+				} else if (this.profit >= 50000) { // > 50K
+					this.could_buy = 'You could buy a <i class="fa fa-diamond"></i>';
+				} else if (this.profit >= 1000) { // > 1000
+					this.could_buy = 'You could buy a <i class="fa fa-cutlery"></i>';
+				} else if (this.profit >= 100) { // > 100
+					this.could_buy = 'You could buy a <i class="fa fa-glass"></i>';
+				} else {
+					this.could_buy = '';
 				}
 			}
 		}
