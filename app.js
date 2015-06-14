@@ -74,7 +74,7 @@ var vm = new Vue({
 				} else if (this.profit >= 100000) { // > 100K
 					this.could_buy = '<i class="fa fa-car"></i> You could buy a speedy sports car';
 				} else if (this.profit >= 50000) { // > 50K
-					this.could_buy = '<i class="fa fa-diamond"></i> You could buy a sparkling diamon';
+					this.could_buy = '<i class="fa fa-diamond"></i> You could buy a sparkling diamond';
 				} else if (this.profit >= 1000) { // > 1000
 					this.could_buy = '<i class="fa fa-cutlery"></i> You could buy a great meal';
 				} else if (this.profit >= 100) { // > 100
