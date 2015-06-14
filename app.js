@@ -8,6 +8,7 @@ var vm = new Vue({
 
 		options_worth: '',
 		profit: '',
+		could_by: '',
 		pct_ownership: '',
 		noProfit: false
 	},
@@ -29,7 +30,6 @@ var vm = new Vue({
 
 		  if (!isFinite(value) || (!value && value !== 0)) return ''
 
-		  value = value * 1000000;
 		  sign = '';
 		  var s = Math.floor(Math.abs(value)).toString(),
 		    i = s.length % 3,
@@ -39,7 +39,7 @@ var vm = new Vue({
 		    v = Math.abs(parseInt((value * 100) % 100, 10)),
 		    f = '.' + (v < 10 ? ('0' + v) : v)
 		  return (value < 0 ? '-' : '') +
-		    sign + h + s.slice(i).replace(digitsRE, '$1,')
+		    sign + h + s.slice(i).replace(digitsRE, '$1,') + f
 		}
 	},
 

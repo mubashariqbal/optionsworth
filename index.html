@@ -104,11 +104,12 @@
             <div class="value" v-if="options_worth">
               <h3>Your Options might be Worth</h3>
               <h2>{{options_worth | currency }}</h2>
-              <p>You own {{pct_ownership}}% of the company</p>
+              <p>You own {{pct_ownership | numberFormat }}% of the company</p>
 
               <div class="profit" v-if="profit">
                 <h3>Profit</h3>
                 <p v-class="noprofit: noProfit">{{profit | currency}}</p>
+                <p>{{ could_buy }}</p>
               </div>
             </div>
         </div>
