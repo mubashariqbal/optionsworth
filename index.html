@@ -35,47 +35,63 @@
           <form class="row">
 
             <div class="form-group row">
-              <div class="control col-md-12">
-                <label class="">Value of Company
-                  <p class="notes">
-                    This is typically set at the companies last funding round.
-                  </p>
-                </label>
-                <span  class="" type="number" name="value_of_company" v-model="value_of_company" placeholder="">{{value_of_company | currency }}</span>
+              <div class="control col-sm-12">
+                <div class="col-sm-8">
+                  <label class="">Value of Company
+                    <p class="notes">
+                      This is typically set at the companies last funding round.
+                    </p>
+                  </label>
+                </div>
+                <div class="col-sm-4">
+                  <span  class="" type="number" name="value_of_company" v-model="value_of_company" placeholder="">{{value_of_company | currency }}</span>
+                </div>
                 <input v-on="change: calculateValue" class="slider" type="range" min="1000000" max="100000000" step="1000000" name="value_of_company" v-model="value_of_company" value="{{value_of_company}}" v-el="value_of_company" placeholder="$ Value of Company"/>
               </div>
             </div>
 
             <div class="form-group row">
-              <div class="control col-md-12">
-                <label class="">Number of options you have
-                  <p class="notes">
-                      This varies greatly, but is determined by your role at the company, and when you join.
-                  </p>
-                </label>
-                <input class="" type="number" name="shares_you_get"    value="{{shares_you_get}}" v-model="shares_you_get" v-el="shares_you_get" placeholder="Number of Shares you Get"/>
+              <div class="control col-sm-12">
+                  <div class="col-sm-8">
+                    <label>Number of options you have
+                      <p class="notes">
+                          This varies greatly, but is determined by your role at the company, and when you join.
+                      </p>
+                    </label>
+                  </div>
+                  <div class="col-sm-4">
+                    <input v-on="change: calculateValue" type="number" name="shares_you_get"    value="{{shares_you_get}}" v-model="shares_you_get" v-el="shares_you_get" placeholder="Number of Shares you Get"/>
+                  </div>
               </div>
             </div>
 
             <div class="form-group row">
-              <div class="control col-md-12">
-                <label class="">Total Shares
-                  <p class="notes">
-                    You'll have to ask the company for this, and is a huge red flag if they won't tell you.
-                  </p>
-                </label>
-                <input class="" type="number" name="total_shares"      value="{{total_shares}}" v-model="total_shares" v-el="total_shares" placeholder="Total Shares"/>
+              <div class="control col-sm-12">
+                <div class="col-sm-8">
+                  <label class="">Total Shares
+                    <p class="notes">
+                      You'll have to ask the company for this, and is a huge red flag if they won't tell you.
+                    </p>
+                  </label>
+                </div>
+                <div class="col-sm-4">
+                  <input v-on="change: calculateValue" class="" type="number" name="total_shares"      value="{{total_shares}}" v-model="total_shares" v-el="total_shares" placeholder="Total Shares"/>
+                </div>
               </div>
             </div>
 
             <div class="form-group row">
-              <div class="control col-md-12">
-                <label class="">Your Price Per Share
-                  <p class="notes">
-                    The earlier you join a startup the less you typically have to pay for the options.
-                  </p>
-                </label>
-                $<input class="" type="number" name="price_you_pay"     value="{{price_you_pay}}" v-model="price_you_pay" v-el="price_you_pay" placeholder="Price you Pay per Share"/>
+              <div class="control col-sm-12">
+                <div class="col-sm-8">
+                  <label class="">Your Price Per Share
+                    <p class="notes">
+                      The earlier you join a startup the less you typically have to pay for the options.
+                    </p>
+                  </label>
+                </div>
+                <div class="col-sm-4">
+                  $<input v-on="change: calculateValue" class="" type="number" min="0.01" step="0.01" name="price_you_pay"     value="{{price_you_pay}}" v-model="price_you_pay" v-el="price_you_pay" placeholder="Price you Pay per Share"/>
+                </div>
               </div>
             </div>
             <div class="text-center">
@@ -100,7 +116,15 @@
     </div>
 
     <footer class="row">
-      <p>Made by <a href="http://twitter.com/mubashariqbal">@mubashariqbal</a></p>
+      <div class="col-sm-4 text-left">
+        <p>&copy; 2015 Options Worth</p>
+      </div>
+      <div class="col-sm-4">
+        <p><a href="http://github.com/mubashariqbal/optionsworth">About</a></p>
+      </div>
+      <div class="col-sm-4 text-right">
+        <p>Made by <a href="http://twitter.com/mubashariqbal">@mubashariqbal</a></p>
+      </div>
     </footer>
 
 

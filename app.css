@@ -17,19 +17,17 @@ label {
 	text-transform: uppercase;
 	font-weight: bold;
     font-size: 1.25em;
-	padding: 1em;
+	padding: 1em 0;
 }
 
 input[type="number"] {
 	border: none;
-	float: right;
 	padding: 1em;
-	margin-right: 1em;
     text-align: right;
     font-size: 1.25em;
     color: #aaa;
     border-bottom: 1px solid #ccc;
-    width: 10em;
+    width: 100%;
 }
 
 input[type="range"] {
@@ -47,7 +45,6 @@ label .notes {
 	text-transform: none;
 	color: #666 !important;
 	font-size: 0.75em;
-	max-width: 40em;
 	font-weight: lighter;
 }
 
