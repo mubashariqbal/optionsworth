@@ -2,13 +2,23 @@
 	font-family: 'Montserrat', sans-serif;
 }
 
-header h1 {
+.header-wrap {
+	background: #f7f7f7;
 	border-bottom: 1px solid #ccc;
+}
+
+.header-wrap-tag {
+	background: #fcfcfc;
+	border-bottom: 1px solid #ddd;
+}
+
+header h1 {
 	padding: 0.5em 0 1em 0;
+	margin-bottom: 0;
 }
 header h2 {
-	border-bottom: 1px solid #ccc;
-	padding-bottom: 1em;
+	margin: 0;
+	padding: 1em 0;
 	text-transform: uppercase;
 	font-size: 1.25em;
 }
